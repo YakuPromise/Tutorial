@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif
+    box-sizing: border-box;
+}
+h1{
+    
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 300px;
+    padding-top: 100px;
+    font-size: 80px;
+}
+.bar{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #f77bec, rgb(202, 146, 255), #cd5cfa);
+    color: #fff;
+    position: relative;
+}
+.par{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.car{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+.nez{
+    height: 100px;
+    width: 120px;
+    position: relative;
+    margin-top: 35px;
+    margin-left:25px;
+}
+.par::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #2ed465;
+    border-radius: 10%;
+    position: absolute;
+    left: -50px;
+    top:-50px;
+    z-index: -1;
+}
+.par::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #c436b1;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -60px;
+    z-index: -1;
+    
+}
+.car span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.car span::after{
+    
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#hrs::after{
+    content: 'HOURS';
+}
+#min::after{
+    content: 'MIN';
+}
+#sec::after{
+    content: 'SEC';
+}
